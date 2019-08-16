@@ -1,0 +1,229 @@
+/*V A R I A B L E S*/
+
+:root {
+    --nav-color: #2B505F;
+    --text-color: white;
+    --hero-color: #11242B;
+    --main-title: 48px;
+    --secondary-title: 24px;
+    --terciary-title: 20px;
+    --text-size: 16px;
+    --little-size: 14px;
+    --spacing: 30px;
+    --padding: 10px;
+    --border: 1px solid #556A88;
+}
+
+
+/* R O O T   F O R   R E M ' S*/
+
+html {
+    font-size: 16px;
+}
+
+/* P R I N C I P A L */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+p, a, strong, button {
+    color: var(--text-color);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrapper {
+    display: inherit;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.section_space {
+    margin: var(--spacing);
+}
+
+.section_title {
+    color: var(--text-color);
+    padding: var(--padding);
+    position: relative;
+    margin-bottom: var(--spacing);
+}
+
+.section_title::before {
+    background: var(--hero-color);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: skew(-15deg);
+    z-index: -1;
+}
+
+/* N A V */
+
+header {
+    background: var(--nav-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand_image {
+    width: 3.5rem;
+}
+
+.brand_image img {
+    width: 100%;
+}
+
+.nav_container {
+    display: flex;
+}
+
+.nav_container li {
+    padding: var(--padding);
+}
+
+.nav_container li:last-child {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/* H E R O */
+
+.hero {
+    background: url("../images/hero-image.jpg") no-repeat center; 
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.hero_text {
+    background: var(--hero-color);
+    background-size: 300px 600px;
+    color: var(--text-color);
+    font-size: var(--main-title);
+    text-align: center;
+    padding: var(--padding);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* E X P E R I E N C E */
+
+.job {
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin-bottom: 1.25rem;
+}
+
+.job_details {
+    padding: var(--padding);
+    line-height: 1.5625rem;
+}
+
+
+/* S K I L L S */
+
+.skills-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills-container {
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    flex: 0 0 4%;
+    margin: 0.625rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skills-container img {
+    text-align: center;
+    width: 10rem;
+}
+
+.skills-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.content {
+    padding: 0.125rem 1rem;
+}
+
+/* F O O T E R */
+
+footer {
+    background: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.social_link {
+    display: inline-block;
+    width: 2rem;
+}
+
+.social_link img {
+    width: 100%;
+}
+
+.form_email {
+    text-align: center;
+}
+
+.form_email h3 {
+    font-size: var(--terciary-title);
+}
+
+.form_email input {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 0.3125rem;
+    margin: 0.5rem auto;
+    padding: var(--padding);
+}
+
+.form_email button {
+    background: transparent;
+    border-radius: 0.3125rem;
+    font-size: var(--text-size);
+    padding: 0.3125rem 1.875rem;
+}
