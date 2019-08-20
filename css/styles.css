@@ -5,10 +5,6 @@
     --text-color: white;
     --hero-color: #11242B;
     --main-title: 48px;
-    --secondary-title: 24px;
-    --terciary-title: 20px;
-    --text-size: 16px;
-    --little-size: 14px;
     --spacing: 30px;
     --padding: 10px;
     --border: 1px solid #556A88;
@@ -57,10 +53,11 @@ p, a, strong, button {
 
 .wrapper {
     display: inherit;
-    width: 90%;
+    flex: 1;
     margin: 0 auto;
     justify-content: inherit;
     align-items: inherit;
+    flex-wrap: wrap;
 }
 
 .section_space {
@@ -106,6 +103,8 @@ header {
 
 .nav_container {
     display: flex;
+    font-size: 16px;
+    padding-right: var(--padding);
 }
 
 .nav_container li {
@@ -115,6 +114,7 @@ header {
 .nav_container li:last-child {
     border: 1px solid white;
     border-radius: 5px;
+    text-align: center;
 }
 
 /* H E R O */
@@ -122,6 +122,7 @@ header {
 .hero {
     background: url("../images/hero-image.jpg") no-repeat center; 
     background-size: cover;
+    font-size: 48px;
     height: 100%;
     width: 100%;
     position: relative;
@@ -129,9 +130,8 @@ header {
 
 .hero_text {
     background: var(--hero-color);
-    background-size: 300px 600px;
     color: var(--text-color);
-    font-size: var(--main-title);
+    font-size: 1em;
     text-align: center;
     padding: var(--padding);
     position: absolute;
@@ -146,11 +146,16 @@ header {
     border: 3px solid gray;
     border-radius: 5px;
     margin-bottom: 1.25rem;
+    color: var(--text-color);
+}
+
+.job .task-list a {
+    color: black;
 }
 
 .job_details {
     padding: var(--padding);
-    line-height: 1.5625rem;
+    line-height: 1.6rem;
 }
 
 
@@ -173,9 +178,13 @@ header {
     transition: 0.3s;
 }
 
-.skills-container img {
+.skills-container figure {
+    width: 11rem;
+}
+
+.skills-container figure img {
     text-align: center;
-    width: 10rem;
+    max-width: 100%;
 }
 
 .skills-container:hover {
@@ -196,9 +205,13 @@ footer {
     padding: 1rem;
 }
 
+.social-media {
+    margin: auto;
+}
+
 .social_link {
     display: inline-block;
-    width: 2rem;
+    width: 4rem;
 }
 
 .social_link img {
@@ -207,6 +220,7 @@ footer {
 
 .form_email {
     text-align: center;
+    margin: auto;
 }
 
 .form_email h3 {
@@ -226,4 +240,56 @@ footer {
     border-radius: 0.3125rem;
     font-size: var(--text-size);
     padding: 0.3125rem 1.875rem;
+    margin-bottom: var(--spacing);
+}
+
+/*Desktop First*/
+
+@media screen and (max-width: 1024px) {
+
+    .hero {
+        font-size: 32px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .hero {
+        font-size: 16px;
+        height: 60%;
+    }
+
+    .brand_image {
+        margin: 0 auto;
+    }
+
+    nav {
+        margin: auto;
+    }
+
+    .nav_container li:last-child {
+        border: none;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+
+    .hero {
+        font-size: 12px;
+    }
+
+    .nav_container {
+        font-size: 12px;
+    }
+    
 }
